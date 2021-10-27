@@ -1,7 +1,15 @@
 $(document).ready(function() {
-    $("p").click(changeParStyle); 
+//    $("p").hover(changeParStyle); 
+    var nounARRAY = ["Toilet", "Antarctica", "Mars"];
 
-    function changeParStyle() {
-        $("p").addClass("clicked");
-    }
+    $("button").click(function() {
+        $(".noun").each(function() {
+            var randomIndex = Math.floor(Math.random() * nounARRAY.length);
+            $(this).text(nounARRAY[randomIndex]);
+        });
+            
+    });
 });
+    // function changeParStyle() {
+    //     $("p").toggleClass("clicked");
+    // }
