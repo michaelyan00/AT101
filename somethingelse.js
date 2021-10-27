@@ -1,7 +1,7 @@
-$(document).read(function() {
-    $("p").hover(changeParStyle);
+$(document).ready(function() {
+    $("p").click(changeParStyle); 
 
     function changeParStyle() {
-        $(this).toggleClass("clicked");
+        $("p").addClass("clicked");
     }
 });
